@@ -1,0 +1,1 @@
+(() => { for (const image of document.querySelectorAll('img[data-fallback-src]')) { image.addEventListener('error', () => { if (image.dataset.fallbackUsed === '1') return; image.dataset.fallbackUsed = '1'; image.src = image.dataset.fallbackSrc; }, { once: true }); } })();
